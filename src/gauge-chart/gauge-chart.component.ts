@@ -82,8 +82,7 @@ export class GaugeChartComponent implements OnInit, OnChanges {
         this.gaugeChart.removeGauge()
         this.centralLabel = changes.centralLabel.currentValue
         this.options.centralLabel = this.centralLabel
-        this.gaugeChart = GaugeChart
-          .gaugeChart(this.element, this.canvasWidth, this.options)
+        this.gaugeChart = GaugeChart.gaugeChart(this.element, this.canvasWidth, this.options)
         this.gaugeChart.updateNeedle(this.needleValue)
       }
     }
