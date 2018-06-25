@@ -50,8 +50,8 @@ export class GaugeChartComponent implements OnInit, OnChanges {
     if (this.optionsCheck()) {
       this.element = this.gaugeArea.nativeElement
       this.options.centralLabel = this.centralLabel
-      this.gaugeChart = GaugeChart // Drawing and updating the chart
-        .gaugeChart(this.element, this.canvasWidth, this.options)
+      // Drawing and updating the chart
+      this.gaugeChart = GaugeChart.gaugeChart(this.element, this.canvasWidth, this.options)
       this.gaugeChart.updateNeedle(this.needleValue)
     }
   }
